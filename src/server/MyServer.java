@@ -27,7 +27,6 @@ public class MyServer {
             System.out.println("连接成功");
             new Thread(new ServerSocketThread(accept,nodePath,welcomeFile)).start();
         }
-
     }
 
     public static void main(String[] args) {

@@ -1,3 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
-.idea\
-out\
+web_project_study.iml
+/out/
+/.idea/

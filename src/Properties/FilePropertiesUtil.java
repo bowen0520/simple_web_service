@@ -12,7 +12,7 @@ public class FilePropertiesUtil {
 
     static {
         try {
-            file.load(new FileInputStream("file.properties"));
+            file.load(new FileInputStream("file. "));
             mime.load(new FileInputStream("mime.properties"));
             status.load(new FileInputStream("status.properties"));
             user.load(new FileInputStream("user.properties"));
