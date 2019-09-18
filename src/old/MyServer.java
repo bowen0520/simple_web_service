@@ -1,8 +1,8 @@
-package server;
+package old;
 
 import PropertiesUtil.FileUtil;
 
-import java.io.*;
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 

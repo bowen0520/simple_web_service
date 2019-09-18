@@ -1,11 +1,8 @@
-package server;
+package old;
 
-import request.Request;
-import request.RequestImpl;
-import response.Response;
-import response.ResponseImpl;
-
-import java.io.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.Socket;
 
 public class ServerSocketThread implements Runnable {
@@ -24,17 +21,17 @@ public class ServerSocketThread implements Runnable {
     public void run() {
         try {
             System.out.println(this+"____________________________________________");
-            Request req = new RequestImpl(inputStream);
-            String resourse = req.getResourse();
-            String method = req.getMethod();
+            RequestUtil request = new RequestUtil(inputStream);
+            String fileName = request.getFileName();
+            String method = request.getMethod();
 
-            if("favicon.ico".equals(resourse)||"".equals(method)){
+            if("favicon.ico".equals(fileName)||"".equals(method)){
                 return ;
             }
 
-            ((RequestImpl) req).print();
+            request.print();
 
-            Response res = new ResponseImpl(req,outputStream);
+            ResponseUtil response = new ResponseUtil(request,outputStream);
 
             inputStream.close();
             outputStream.close();

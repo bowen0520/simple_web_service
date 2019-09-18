@@ -1,8 +1,17 @@
-package util;
+package old;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+
+/**
+ * @program: web_project_study
+ * @package: server
+ * @filename: PropertiesUtil.java
+ * @create: 2019/09/17 20:02
+ * @author: 29314
+ * @description: .properties工具类
+ **/
 
 public class PropertiesUtil {
     private static Properties file = new Properties();
