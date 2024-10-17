@@ -12,6 +12,7 @@ public class FileUtil{
 
     static {
         try {
+            System.out.println("test1");
             //test
             util.load(new FileInputStream("file.properties"));
             System.out.println("socket1");
