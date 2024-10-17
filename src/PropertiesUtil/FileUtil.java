@@ -13,6 +13,7 @@ public class FileUtil{
     static {
         try {
             util.load(new FileInputStream("file.properties"));
+            //master
         } catch (IOException e) {
             e.printStackTrace();
         }
